@@ -17,7 +17,7 @@ namespace modul3_103022300145
             InitializeComponent();
         }
 
-        int hasil, a, b;
+        int hasil, a, b, c;
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -75,9 +75,19 @@ namespace modul3_103022300145
 
         private void buttonplus_Click(object sender, EventArgs e)
         {
-            b = a;
-            a = 0;
-            labelOutput.Text += "+";
+            if (c == 0)
+            {
+                c = a;
+                b = 0;
+                a = 0;
+                labelOutput.Text += "+";
+            }
+            else
+            {
+                b = a;
+                a = 0;
+                labelOutput.Text += "+";
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -88,7 +98,7 @@ namespace modul3_103022300145
 
         private void buttonsmdg_Click(object sender, EventArgs e)
         {
-            hasil = a + b;
+            hasil = a + b + c;
             labelOutput.Text = hasil.ToString();
         }
     }
